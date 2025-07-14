@@ -3,51 +3,77 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Portfolio - B.Tech CSE</title>
+  <title>Portfolio | CSE Student at VIT Bhopal</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1>Hi, I'm a 3rd Year CSE Student at VIT Bhopal</h1>
-    <p>CGPA: 7.5 | Branch: CSE Core</p>
+  <header class="animate-fade-in">
+    <div class="container">
+      <h1>👋 Hi, I'm a 3rd Year CSE Student</h1>
+      <p>🎓 VIT Bhopal | CGPA: <strong>7.5</strong> | Branch: CSE Core</p>
+    </div>
   </header>
 
-  <section class="skills">
-    <h2>My Skills</h2>
-    <ul>
-      <li>Python</li>
-      <li>Java</li>
-      <li>JavaScript</li>
-    </ul>
+  <section class="skills animate-slide-up">
+    <div class="container">
+      <h2>⚙️ Skills</h2>
+      <div class="skill-tags">
+        <span>Python</span>
+        <span>Java</span>
+        <span>JavaScript</span>
+      </div>
+    </div>
   </section>
 
-  <section class="links">
-    <h2>Connect with Me</h2>
-    <p>
-      <a href="https://www.linkedin.com/in/your-linkedin" target="_blank">LinkedIn</a> |
-      <a href="mailto:your.email@example.com">Email</a>
-    </p>
+  <section class="education animate-slide-up">
+    <div class="container">
+      <h2>🏆 Educational Achievements</h2>
+      <ul>
+        <li>📌 Built a mini project using Python and Flask</li>
+        <li>📌 Participated in HackVIT 2024</li>
+        <li>📌 Completed Java Data Structures course on Coursera</li>
+      </ul>
+    </div>
   </section>
 
-  <button onclick="toggleForm()">📨 Contact Me</button>
+  <section class="connect animate-slide-up">
+    <div class="container">
+      <h2>🌐 Let's Connect</h2>
+      <a href="https://www.linkedin.com/in/your-linkedin" target="_blank" class="btn">LinkedIn</a>
+      <a href="mailto:your.email@example.com" class="btn">Email Me</a>
+    </div>
+  </section>
 
-  <!-- Popup Form -->
+  <section class="contact-button animate-slide-up">
+    <div class="container">
+      <button onclick="toggleForm()">📨 Contact Me</button>
+    </div>
+  </section>
+
+  <!-- Contact Popup Form -->
   <div class="popup-form" id="formPopup">
     <form class="form-container">
       <h2>Contact Me</h2>
       <label for="name">Your Name</label>
-      <input type="text" id="name" required>
+      <input type="text" id="name" placeholder="Enter your name" required>
 
       <label for="email">Your Email</label>
-      <input type="email" id="email" required>
+      <input type="email" id="email" placeholder="Enter your email" required>
 
       <label for="message">Message</label>
-      <textarea id="message" required></textarea>
+      <textarea id="message" placeholder="Type your message" required></textarea>
 
-      <button type="submit">Send</button>
-      <button type="button" onclick="toggleForm()">Close</button>
+      <div class="form-buttons">
+        <button type="submit">Send</button>
+        <button type="button" onclick="toggleForm()">Close</button>
+      </div>
     </form>
   </div>
+
+  <footer class="animate-fade-in">
+    <p>Made by a VITian</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
