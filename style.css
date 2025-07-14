@@ -1,42 +1,63 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
-  background: #f4f4f4;
+  background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+  color: #333;
   text-align: center;
+}
+
+.container {
+  padding: 2rem;
 }
 
 header {
   background: #6200ea;
   color: white;
-  padding: 2rem 1rem;
+  padding: 3rem 1rem;
+  border-bottom: 5px solid #3700b3;
 }
 
-.skills, .links {
-  margin: 2rem;
+h1, h2 {
+  margin-bottom: 1rem;
+}
+
+.skill-tags span {
+  display: inline-block;
+  background: #bb86fc;
+  color: white;
+  padding: 0.5rem 1rem;
+  margin: 0.3rem;
+  border-radius: 20px;
+  font-weight: bold;
 }
 
 ul {
-  list-style: none;
-  padding: 0;
+  list-style-type: '✨ ';
+  padding-left: 1.5rem;
+  text-align: left;
+  display: inline-block;
 }
 
-button {
+.btn, button {
   padding: 10px 20px;
-  font-size: 16px;
-  margin-top: 1rem;
-  background-color: #6200ea;
-  color: white;
+  margin: 0.5rem;
+  background-color: #03dac6;
   border: none;
+  color: black;
+  font-weight: bold;
+  border-radius: 30px;
   cursor: pointer;
-  border-radius: 5px;
+  transition: transform 0.2s ease;
 }
 
-button:hover {
-  background-color: #3700b3;
+button:hover, .btn:hover {
+  background-color: #018786;
+  color: white;
+  transform: scale(1.05);
 }
 
-/* Popup form styling */
+/* Popup form */
 .popup-form {
   display: none;
   position: fixed;
@@ -44,29 +65,56 @@ button:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0,0,0,0.5);
   justify-content: center;
   align-items: center;
+  z-index: 999;
 }
 
 .form-container {
   background: white;
-  padding: 20px;
-  border-radius: 8px;
+  padding: 2rem;
+  border-radius: 15px;
   width: 90%;
   max-width: 400px;
-  text-align: left;
+  animation: slideUp 0.4s ease-out;
 }
 
-.form-container input, .form-container textarea {
+input, textarea {
   width: 100%;
-  padding: 8px;
-  margin: 5px 0 15px;
+  padding: 10px;
+  margin: 0.5rem 0 1rem;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 8px;
+  font-family: inherit;
 }
 
-.form-container button {
-  width: 48%;
-  margin-right: 2%;
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer {
+  background: #eeeeee;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Animations */
+.animate-fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 1s ease;
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes slideUp {
+  0% {transform: translateY(40px); opacity: 0;}
+  100% {transform: translateY(0); opacity: 1;}
 }
